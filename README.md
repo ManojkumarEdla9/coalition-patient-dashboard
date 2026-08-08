@@ -22,11 +22,11 @@ A responsive **Patient Healthcare Dashboard** developed as part of a frontend te
 
 ![Coalition Patient Dashboard](./dashboard.png)
 
-![Coalition Patient Dashboard](./Colition dashboard 1.png)
+![Coalition Patient Dashboard](./Colitiondashboard1.png)
 
-![Coalition Patient Dashboard](./Colition dashboard 2.png)
+![Coalition Patient Dashboard](./Colitiondashboard2.png)
 
-![Coalition Patient Dashboard](./Colition dashboard 3.png)
+![Coalition Patient Dashboard](./Colitiondashboard3.png)
 
 ## 🎯 Assessment Objective
 
