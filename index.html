@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Patient Dashboard</title>
+
+    <link rel="stylesheet"
+        href="css/style.css">
+</head>
+
+<body>
+
+    <!-- =====================================
+         HEADER
+    ====================================== -->
+
+    <header class="top-header">
+
+        <div class="logo">
+            <div class="logo-icon">✚</div>
+            <span>Tech.Care</span>
+        </div>
+
+
+        <nav class="main-nav">
+
+            <a href="#">
+                Overview
+            </a>
+
+            <a href="#" class="active">
+                Patients
+            </a>
+
+            <a href="#">
+                Schedule
+            </a>
+
+            <a href="#">
+                Message
+            </a>
+
+            <a href="#">
+                Transactions
+            </a>
+
+        </nav>
+
+
+        <div class="doctor-info">
+
+            <div class="doctor-avatar">
+                DR
+            </div>
+
+            <div>
+                <strong>Dr. Jose Simmons</strong>
+                <span>General Practitioner</span>
+            </div>
+
+            <div class="settings">
+                ⚙
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================
+         MAIN DASHBOARD
+    ====================================== -->
+
+    <main class="dashboard">
+
+
+        <!-- =================================
+             LEFT PATIENT SIDEBAR
+        ================================== -->
+
+        <aside class="patients-sidebar">
+
+            <div class="patients-title">
+
+                <h2>Patients</h2>
+
+                <span>⌕</span>
+
+            </div>
+
+
+            <!-- Jessica -->
+
+            <div class="patient-item selected">
+
+                <img
+                    id="sidebar-patient-image"
+                    src=""
+                    alt="Jessica Taylor"
+                >
+
+                <div>
+
+                    <strong>
+                        Jessica Taylor
+                    </strong>
+
+                    <span>
+                        Female, 28
+                    </span>
+
+                </div>
+
+                <span class="more">
+                    ⋮
+                </span>
+
+            </div>
+
+
+            <!-- Other patients are intentionally not displayed -->
+            <!-- as instructed by the assessment -->
+
+
+        </aside>
+
+
+        <!-- =================================
+             CENTER CONTENT
+        ================================== -->
+
+        <section class="content">
+
+
+            <!-- =================================
+                 DIAGNOSIS HISTORY
+            ================================== -->
+
+            <div class="card">
+
+                <div class="section-header">
+
+                    <h2>
+                        Diagnosis History
+                    </h2>
+
+                    <select>
+                        <option>
+                            Last 6 months
+                        </option>
+
+                        <option>
+                            Last year
+                        </option>
+
+                        <option>
+                            All
+                        </option>
+                    </select>
+
+                </div>
+
+
+                <div class="blood-pressure-header">
+
+                    <h3>
+                        Blood Pressure
+                    </h3>
+
+
+                    <div class="legend">
+
+                        <span>
+
+                            <span
+                                class="legend-dot systolic-dot">
+                            </span>
+
+                            Systolic
+
+                        </span>
+
+
+                        <span>
+
+                            <span
+                                class="legend-dot diastolic-dot">
+                            </span>
+
+                            Diastolic
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Chart -->
+
+                <div class="chart-container">
+
+                    <canvas
+                        id="bloodPressureChart">
+                    </canvas>
+
+                </div>
+
+
+                <!-- =================================
+                     HEALTH METRICS
+                ================================== -->
+
+                <div class="health-metrics">
+
+
+                    <!-- Respiratory -->
+
+                    <div class="metric respiratory">
+
+                        <div class="metric-icon">
+                            🫁
+                        </div>
+
+                        <span>
+                            Respiratory Rate
+                        </span>
+
+                        <strong id="respiratory-rate">
+                            --
+                        </strong>
+
+                        <small id="respiratory-level">
+                            --
+                        </small>
+
+                    </div>
+
+
+                    <!-- Temperature -->
+
+                    <div class="metric temperature">
+
+                        <div class="metric-icon">
+                            🌡
+                        </div>
+
+                        <span>
+                            Temperature
+                        </span>
+
+                        <strong id="temperature">
+                            --
+                        </strong>
+
+                        <small id="temperature-level">
+                            --
+                        </small>
+
+                    </div>
+
+
+                    <!-- Heart Rate -->
+
+                    <div class="metric heart">
+
+                        <div class="metric-icon">
+                            ❤️
+                        </div>
+
+                        <span>
+                            Heart Rate
+                        </span>
+
+                        <strong id="heart-rate">
+                            --
+                        </strong>
+
+                        <small id="heart-rate-level">
+                            --
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================
+                 DIAGNOSTIC LIST
+            ================================== -->
+
+            <div class="card">
+
+                <h2>
+                    Diagnostic List
+                </h2>
+
+
+                <div class="diagnostic-table">
+
+
+                    <div class="table-header">
+
+                        <span>
+                            Problem/Diagnosis
+                        </span>
+
+                        <span>
+                            Description
+                        </span>
+
+                        <span>
+                            Status
+                        </span>
+
+                    </div>
+
+
+                    <div id="diagnostic-list">
+
+                        <!-- JavaScript inserts
+                             diagnostic rows here -->
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================
+                 LAB RESULTS
+            ================================== -->
+
+            <div class="card lab-card">
+
+                <h2>
+                    Lab Results
+                </h2>
+
+
+                <div id="lab-results">
+
+                    <!-- JavaScript inserts
+                         lab results here -->
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- =================================
+             RIGHT PATIENT INFORMATION
+        ================================== -->
+
+        <aside class="patient-information">
+
+
+            <div class="card profile-card">
+
+
+                <!-- Patient Image -->
+
+                <img
+                    id="patient-image"
+                    class="profile-image"
+                    src=""
+                    alt="Jessica Taylor"
+                >
+
+
+                <!-- Patient Name -->
+
+                <h1 id="patient-name">
+                    Loading...
+                </h1>
+
+
+                <!-- Gender + Age -->
+
+                <p id="patient-gender-age">
+                    --
+                </p>
+
+
+                <!-- Information -->
+
+                <div class="information-list">
+
+
+                    <!-- Date of Birth -->
+
+                    <div class="information-item">
+
+                        <div class="information-icon">
+                            📅
+                        </div>
+
+                        <div>
+
+                            <small>
+                                Date Of Birth
+                            </small>
+
+                            <strong id="date-of-birth">
+                                --
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Phone -->
+
+                    <div class="information-item">
+
+                        <div class="information-icon">
+                            ☎
+                        </div>
+
+                        <div>
+
+                            <small>
+                                Phone Number
+                            </small>
+
+                            <strong id="phone-number">
+                                --
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Emergency Contact -->
+
+                    <div class="information-item">
+
+                        <div class="information-icon">
+                            📞
+                        </div>
+
+                        <div>
+
+                            <small>
+                                Emergency Contact
+                            </small>
+
+                            <strong id="emergency-contact">
+                                --
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Insurance -->
+
+                    <div class="information-item">
+
+                        <div class="information-icon">
+                            🛡
+                        </div>
+
+                        <div>
+
+                            <small>
+                                Insurance Provider
+                            </small>
+
+                            <strong id="insurance-type">
+                                --
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+                <button class="show-details">
+                    Show All Information
+                </button>
+
+            </div>
+
+        </aside>
+
+
+    </main>
+
+
+    <!-- =====================================
+         CHART.JS
+    ====================================== -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/chart.js">
+    </script>
+
+
+    <!-- =====================================
+         YOUR JAVASCRIPT
+    ====================================== -->
+
+    <script src="js/api.js"></script>
+
+    <script src="js/app.js"></script>
+
+
+</body>
+
+</html>
