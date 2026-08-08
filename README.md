@@ -22,6 +22,12 @@ A responsive **Patient Healthcare Dashboard** developed as part of a frontend te
 
 ![Coalition Patient Dashboard](./dashboard.png)
 
+![Coalition Patient Dashboard](./Colition dashboard 1.png)
+
+![Coalition Patient Dashboard](./Colition dashboard 2.png)
+
+![Coalition Patient Dashboard](./Colition dashboard 3.png)
+
 ## 🎯 Assessment Objective
 
 The goal of this project was to transform the provided design reference into a functional, responsive web application while integrating API data to populate the dashboard dynamically.
