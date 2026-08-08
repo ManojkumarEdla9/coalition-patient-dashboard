@@ -20,7 +20,7 @@ A responsive **Patient Healthcare Dashboard** developed as part of a frontend te
 
 ![Coalition Patient Dashboard](./dashboard-mobile.png)
 
-![Coalition Patient Dashboard](./dashboa.png)
+![Coalition Patient Dashboard](./dashboard.png)
 
 ## 🎯 Assessment Objective
 
